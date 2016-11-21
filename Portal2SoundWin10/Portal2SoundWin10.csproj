@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portal2SoundWin10</RootNamespace>
+    <AssemblyName>Portal2SoundWin10</AssemblyName>
+    <DefaultLanguage>fr</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppxBundle>Always</AppxBundle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="rsc\sound\annonceur1.wav" />
+    <Content Include="rsc\sound\annonceur10.wav" />
+    <Content Include="rsc\sound\annonceur2.wav" />
+    <Content Include="rsc\sound\annonceur3.wav" />
+    <Content Include="rsc\sound\annonceur4.wav" />
+    <Content Include="rsc\sound\annonceur5.wav" />
+    <Content Include="rsc\sound\annonceur6.wav" />
+    <Content Include="rsc\sound\annonceur7.wav" />
+    <Content Include="rsc\sound\annonceur8.wav" />
+    <Content Include="rsc\sound\annonceur9.wav" />
+    <Content Include="rsc\sound\bonus1.wav" />
+    <Content Include="rsc\sound\bonus10.wav" />
+    <Content Include="rsc\sound\bonus11.wav" />
+    <Content Include="rsc\sound\bonus12.wav" />
+    <Content Include="rsc\sound\bonus13.wav" />
+    <Content Include="rsc\sound\bonus14.wav" />
+    <Content Include="rsc\sound\bonus15.wav" />
+    <Content Include="rsc\sound\bonus16.wav" />
+    <Content Include="rsc\sound\bonus17.wav" />
+    <Content Include="rsc\sound\bonus18.wav" />
+    <Content Include="rsc\sound\bonus19.wav" />
+    <Content Include="rsc\sound\bonus2.wav" />
+    <Content Include="rsc\sound\bonus20.wav" />
+    <Content Include="rsc\sound\bonus21.wav" />
+    <Content Include="rsc\sound\bonus22.wav" />
+    <Content Include="rsc\sound\bonus23.wav" />
+    <Content Include="rsc\sound\bonus24.wav" />
+    <Content Include="rsc\sound\bonus25.wav" />
+    <Content Include="rsc\sound\bonus26.wav" />
+    <Content Include="rsc\sound\bonus27.wav" />
+    <Content Include="rsc\sound\bonus28.wav" />
+    <Content Include="rsc\sound\bonus29.wav" />
+    <Content Include="rsc\sound\bonus3.wav" />
+    <Content Include="rsc\sound\bonus4.wav" />
+    <Content Include="rsc\sound\bonus5.wav" />
+    <Content Include="rsc\sound\bonus6.wav" />
+    <Content Include="rsc\sound\bonus7.wav" />
+    <Content Include="rsc\sound\bonus8.wav" />
+    <Content Include="rsc\sound\bonus9.wav" />
+    <Content Include="rsc\sound\cave1.wav" />
+    <Content Include="rsc\sound\cave10.wav" />
+    <Content Include="rsc\sound\cave11.wav" />
+    <Content Include="rsc\sound\cave12.wav" />
+    <Content Include="rsc\sound\cave13.wav" />
+    <Content Include="rsc\sound\cave14.wav" />
+    <Content Include="rsc\sound\cave15.wav" />
+    <Content Include="rsc\sound\cave16.wav" />
+    <Content Include="rsc\sound\cave17.wav" />
+    <Content Include="rsc\sound\cave2.wav" />
+    <Content Include="rsc\sound\cave3.wav" />
+    <Content Include="rsc\sound\cave4.wav" />
+    <Content Include="rsc\sound\cave5.wav" />
+    <Content Include="rsc\sound\cave6.wav" />
+    <Content Include="rsc\sound\cave7.wav" />
+    <Content Include="rsc\sound\cave8.wav" />
+    <Content Include="rsc\sound\cave9.wav" />
+    <Content Include="rsc\sound\glados1.wav" />
+    <Content Include="rsc\sound\glados10.wav" />
+    <Content Include="rsc\sound\glados11.wav" />
+    <Content Include="rsc\sound\glados12.wav" />
+    <Content Include="rsc\sound\glados13.wav" />
+    <Content Include="rsc\sound\glados14.wav" />
+    <Content Include="rsc\sound\glados15.wav" />
+    <Content Include="rsc\sound\glados16.wav" />
+    <Content Include="rsc\sound\glados17.wav" />
+    <Content Include="rsc\sound\glados18.wav" />
+    <Content Include="rsc\sound\glados19.wav" />
+    <Content Include="rsc\sound\glados2.wav" />
+    <Content Include="rsc\sound\glados20.wav" />
+    <Content Include="rsc\sound\glados21.wav" />
+    <Content Include="rsc\sound\glados22.wav" />
+    <Content Include="rsc\sound\glados23.wav" />
+    <Content Include="rsc\sound\glados3.wav" />
+    <Content Include="rsc\sound\glados4.wav" />
+    <Content Include="rsc\sound\glados5.wav" />
+    <Content Include="rsc\sound\glados6.wav" />
+    <Content Include="rsc\sound\glados7.wav" />
+    <Content Include="rsc\sound\glados8.wav" />
+    <Content Include="rsc\sound\glados9.wav" />
+    <Content Include="rsc\sound\procAventure1.wav" />
+    <Content Include="rsc\sound\procAventure10.wav" />
+    <Content Include="rsc\sound\procAventure11.wav" />
+    <Content Include="rsc\sound\procAventure12.wav" />
+    <Content Include="rsc\sound\procAventure2.wav" />
+    <Content Include="rsc\sound\procAventure3.wav" />
+    <Content Include="rsc\sound\procAventure4.wav" />
+    <Content Include="rsc\sound\procAventure5.wav" />
+    <Content Include="rsc\sound\procAventure6.wav" />
+    <Content Include="rsc\sound\procAventure7.wav" />
+    <Content Include="rsc\sound\procAventure8.wav" />
+    <Content Include="rsc\sound\procAventure9.wav" />
+    <Content Include="rsc\sound\procCuriosite1.wav" />
+    <Content Include="rsc\sound\procCuriosite2.wav" />
+    <Content Include="rsc\sound\procCuriosite3.wav" />
+    <Content Include="rsc\sound\procCuriosite4.wav" />
+    <Content Include="rsc\sound\procCuriosite5.wav" />
+    <Content Include="rsc\sound\procCuriosite6.wav" />
+    <Content Include="rsc\sound\procCuriosite7.wav" />
+    <Content Include="rsc\sound\procCuriosite8.wav" />
+    <Content Include="rsc\sound\procRecette1.wav" />
+    <Content Include="rsc\sound\procRecette10.wav" />
+    <Content Include="rsc\sound\procRecette11.wav" />
+    <Content Include="rsc\sound\procRecette2.wav" />
+    <Content Include="rsc\sound\procRecette3.wav" />
+    <Content Include="rsc\sound\procRecette4.wav" />
+    <Content Include="rsc\sound\procRecette5.wav" />
+    <Content Include="rsc\sound\procRecette6.wav" />
+    <Content Include="rsc\sound\procRecette7.wav" />
+    <Content Include="rsc\sound\procRecette8.wav" />
+    <Content Include="rsc\sound\procRecette9.wav" />
+    <Content Include="rsc\sound\procSavoir1.wav" />
+    <Content Include="rsc\sound\procSavoir10.wav" />
+    <Content Include="rsc\sound\procSavoir11.wav" />
+    <Content Include="rsc\sound\procSavoir12.wav" />
+    <Content Include="rsc\sound\procSavoir13.wav" />
+    <Content Include="rsc\sound\procSavoir14.wav" />
+    <Content Include="rsc\sound\procSavoir15.wav" />
+    <Content Include="rsc\sound\procSavoir16.wav" />
+    <Content Include="rsc\sound\procSavoir17.wav" />
+    <Content Include="rsc\sound\procSavoir2.wav" />
+    <Content Include="rsc\sound\procSavoir3.wav" />
+    <Content Include="rsc\sound\procSavoir4.wav" />
+    <Content Include="rsc\sound\procSavoir5.wav" />
+    <Content Include="rsc\sound\procSavoir6.wav" />
+    <Content Include="rsc\sound\procSavoir7.wav" />
+    <Content Include="rsc\sound\procSavoir8.wav" />
+    <Content Include="rsc\sound\procSavoir9.wav" />
+    <Content Include="rsc\sound\procSpace1.wav" />
+    <Content Include="rsc\sound\procSpace10.wav" />
+    <Content Include="rsc\sound\procSpace11.wav" />
+    <Content Include="rsc\sound\procSpace12.wav" />
+    <Content Include="rsc\sound\procSpace13.wav" />
+    <Content Include="rsc\sound\procSpace14.wav" />
+    <Content Include="rsc\sound\procSpace15.wav" />
+    <Content Include="rsc\sound\procSpace2.wav" />
+    <Content Include="rsc\sound\procSpace3.wav" />
+    <Content Include="rsc\sound\procSpace4.wav" />
+    <Content Include="rsc\sound\procSpace5.wav" />
+    <Content Include="rsc\sound\procSpace6.wav" />
+    <Content Include="rsc\sound\procSpace7.wav" />
+    <Content Include="rsc\sound\procSpace8.wav" />
+    <Content Include="rsc\sound\procSpace9.wav" />
+    <Content Include="rsc\sound\turret1.wav" />
+    <Content Include="rsc\sound\turret10.wav" />
+    <Content Include="rsc\sound\turret11.wav" />
+    <Content Include="rsc\sound\turret12.wav" />
+    <Content Include="rsc\sound\turret13.wav" />
+    <Content Include="rsc\sound\turret14.wav" />
+    <Content Include="rsc\sound\turret15.wav" />
+    <Content Include="rsc\sound\turret16.wav" />
+    <Content Include="rsc\sound\turret17.wav" />
+    <Content Include="rsc\sound\turret18.wav" />
+    <Content Include="rsc\sound\turret19.wav" />
+    <Content Include="rsc\sound\turret2.wav" />
+    <Content Include="rsc\sound\turret20.wav" />
+    <Content Include="rsc\sound\turret21.wav" />
+    <Content Include="rsc\sound\turret22.wav" />
+    <Content Include="rsc\sound\turret23.wav" />
+    <Content Include="rsc\sound\turret24.wav" />
+    <Content Include="rsc\sound\turret25.wav" />
+    <Content Include="rsc\sound\turret26.wav" />
+    <Content Include="rsc\sound\turret27.wav" />
+    <Content Include="rsc\sound\turret28.wav" />
+    <Content Include="rsc\sound\turret29.wav" />
+    <Content Include="rsc\sound\turret3.wav" />
+    <Content Include="rsc\sound\turret30.wav" />
+    <Content Include="rsc\sound\turret31.wav" />
+    <Content Include="rsc\sound\turret4.wav" />
+    <Content Include="rsc\sound\turret5.wav" />
+    <Content Include="rsc\sound\turret6.wav" />
+    <Content Include="rsc\sound\turret7.wav" />
+    <Content Include="rsc\sound\turret8.wav" />
+    <Content Include="rsc\sound\turret9.wav" />
+    <Content Include="rsc\sound\turretDef1.wav" />
+    <Content Include="rsc\sound\turretDef10.wav" />
+    <Content Include="rsc\sound\turretDef11.wav" />
+    <Content Include="rsc\sound\turretDef12.wav" />
+    <Content Include="rsc\sound\turretDef13.wav" />
+    <Content Include="rsc\sound\turretDef14.wav" />
+    <Content Include="rsc\sound\turretDef15.wav" />
+    <Content Include="rsc\sound\turretDef16.wav" />
+    <Content Include="rsc\sound\turretDef17.wav" />
+    <Content Include="rsc\sound\turretDef18.wav" />
+    <Content Include="rsc\sound\turretDef19.wav" />
+    <Content Include="rsc\sound\turretDef2.wav" />
+    <Content Include="rsc\sound\turretDef20.wav" />
+    <Content Include="rsc\sound\turretDef21.wav" />
+    <Content Include="rsc\sound\turretDef22.wav" />
+    <Content Include="rsc\sound\turretDef23.wav" />
+    <Content Include="rsc\sound\turretDef24.wav" />
+    <Content Include="rsc\sound\turretDef25.wav" />
+    <Content Include="rsc\sound\turretDef26.wav" />
+    <Content Include="rsc\sound\turretDef27.wav" />
+    <Content Include="rsc\sound\turretDef28.wav" />
+    <Content Include="rsc\sound\turretDef29.wav" />
+    <Content Include="rsc\sound\turretDef3.wav" />
+    <Content Include="rsc\sound\turretDef30.wav" />
+    <Content Include="rsc\sound\turretDef31.wav" />
+    <Content Include="rsc\sound\turretDef32.wav" />
+    <Content Include="rsc\sound\turretDef33.wav" />
+    <Content Include="rsc\sound\turretDef4.wav" />
+    <Content Include="rsc\sound\turretDef5.wav" />
+    <Content Include="rsc\sound\turretDef6.wav" />
+    <Content Include="rsc\sound\turretDef7.wav" />
+    <Content Include="rsc\sound\turretDef8.wav" />
+    <Content Include="rsc\sound\turretDef9.wav" />
+    <Content Include="rsc\sound\wheatley1.wav" />
+    <Content Include="rsc\sound\wheatley10.wav" />
+    <Content Include="rsc\sound\wheatley11.wav" />
+    <Content Include="rsc\sound\wheatley12.wav" />
+    <Content Include="rsc\sound\wheatley13.wav" />
+    <Content Include="rsc\sound\wheatley14.wav" />
+    <Content Include="rsc\sound\wheatley15.wav" />
+    <Content Include="rsc\sound\wheatley16.wav" />
+    <Content Include="rsc\sound\wheatley17.wav" />
+    <Content Include="rsc\sound\wheatley18.wav" />
+    <Content Include="rsc\sound\wheatley19.wav" />
+    <Content Include="rsc\sound\wheatley2.wav" />
+    <Content Include="rsc\sound\wheatley20.wav" />
+    <Content Include="rsc\sound\wheatley21.wav" />
+    <Content Include="rsc\sound\wheatley22.wav" />
+    <Content Include="rsc\sound\wheatley23.wav" />
+    <Content Include="rsc\sound\wheatley24.wav" />
+    <Content Include="rsc\sound\wheatley25.wav" />
+    <Content Include="rsc\sound\wheatley26.wav" />
+    <Content Include="rsc\sound\wheatley3.wav" />
+    <Content Include="rsc\sound\wheatley4.wav" />
+    <Content Include="rsc\sound\wheatley5.wav" />
+    <Content Include="rsc\sound\wheatley6.wav" />
+    <Content Include="rsc\sound\wheatley7.wav" />
+    <Content Include="rsc\sound\wheatley8.wav" />
+    <Content Include="rsc\sound\wheatley9.wav" />
+    <None Include="Portal2SoundWin10_StoreKey.pfx" />
+    <None Include="project.json" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square310x310Logo.scale-200.png" />
+    <Content Include="Assets\Square310x310Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square71x71Logo.scale-100.png" />
+    <Content Include="Assets\Square71x71Logo.scale-200.png" />
+    <Content Include="Assets\Square71x71Logo.scale-400.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="rsc\Fonts\SF Movie Poster.ttf" />
+    <PRIResource Include="Strings\fr\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ContextStatic.cs" />
+    <Compile Include="Views\LireSon.xaml.cs">
+      <DependentUpon>LireSon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Perso.cs" />
+    <Compile Include="Model\Son.cs" />
+    <Compile Include="Views\PersoPage.xaml.cs">
+      <DependentUpon>PersoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="ViewModel\LireSonViewModel.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="ViewModel\PersoPageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="rsc\data.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="rsc\img\bg1.jpg" />
+    <Content Include="rsc\img\logoAcceuil.png" />
+    <Content Include="rsc\img\logoAperture1.png" />
+    <Content Include="rsc\img\logoAperture2.png" />
+    <Content Include="rsc\img\logoAperture3.png" />
+    <Content Include="rsc\img\logoAnnonceur.png" />
+    <Content Include="rsc\img\logoBonus.png" />
+    <Content Include="rsc\img\logoCave.png" />
+    <Content Include="rsc\img\logoGlados.png" />
+    <Content Include="rsc\img\logoProcAventure.png" />
+    <Content Include="rsc\img\logoProcCuriosite.png" />
+    <Content Include="rsc\img\logoProcRecette.png" />
+    <Content Include="rsc\img\logoProcSavoir.png" />
+    <Content Include="rsc\img\logoProcSpace.png" />
+    <Content Include="rsc\img\logoTurret.png" />
+    <Content Include="rsc\img\logoTurretDef.png" />
+    <Content Include="rsc\img\logoWheatley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LireSon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PersoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="Portal2SoundWin10.Views.LireSon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <FontFamily x:Key="Portal2FontFamily">../rsc/Fonts/SF Movie Poster.ttf#SF Movie Poster</FontFamily>
+    </Page.Resources>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal">
+            <AppBarButton x:Uid="rateButton" x:Name="RateButton" Icon="Favorite" Click="RateButton_Click"/>
+            <AppBarButton x:Uid="bugsButton" x:Name="BugsButton" Icon="Mail" Click="BugsButton_Click"/>
+            <AppBarButton x:Uid="appdButton" x:Name="AppdButton" Icon="Help" Click="AppdButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="../rsc/img/bg1.jpg" Opacity="0.9"/>
+        </Grid.Background>
+        <Image Source="{x:Bind ViewModel.SonALire.Parent.Logo,Mode=OneWay}" HorizontalAlignment="Left" Height="146" Margin="10,23,0,0" VerticalAlignment="Top" Width="135"/>
+        <Image Source="{x:Bind ViewModel.SonALire.Parent.LogoAperture,Mode=OneWay}" HorizontalAlignment="Right" Height="59" Margin="0,10,10,0" VerticalAlignment="Top" Width="240"/>
+        <TextBlock FontFamily="{StaticResource Portal2FontFamily}" Margin="150,74,210,0" TextWrapping="Wrap" Text="{x:Bind ViewModel.SonALire.Parent.Id,Mode=OneWay}" VerticalAlignment="Top" FontSize="50"/>
+        <TextBlock FontFamily="{StaticResource Portal2FontFamily}" Margin="195,74,5,0" Text="{x:Bind ViewModel.SonALire.Parent.Nom,Mode=OneWay}" VerticalAlignment="Top" FontSize="50" Height="95" TextLineBounds="TrimToCapHeight" OpticalMarginAlignment="TrimSideBearings" TextWrapping="WrapWholeWords" />
+        <TextBlock Margin="0,174,0,0" CharacterSpacing="40" FontFamily="{StaticResource Portal2FontFamily}" TextWrapping="Wrap" Text="{x:Bind ViewModel.SonALire.Text,Mode=OneWay}" VerticalAlignment="Top" FontSize="35" TextAlignment="Center" MaxLines="2"/>
+        <MediaElement x:Name="SonElement" HorizontalAlignment="Left" Source="{x:Bind ViewModel.SonALire.Raccourci,Mode=OneWay}" Height="100" Margin="174,221,0,0" VerticalAlignment="Top" Width="51" AutoPlay="False" MediaOpened="SonElement_MediaOpened"/>
+        <AppBarButton x:Name="PlayButton" HorizontalAlignment="Center" Icon="Play" Margin="0,231,100,0" VerticalAlignment="Top" Click="PlayButton_Click"/>
+        <AppBarButton x:Name="StopButton" HorizontalAlignment="Center" Icon="Pause" Margin="100,231,0,0" VerticalAlignment="Top" Click="StopButton_Click"/>
+        <AppBarButton x:Name="PreviousSon" HorizontalAlignment="Center" Icon="Previous" Label="" Margin="0,231,250,0" VerticalAlignment="Top" Click="PreviousSon_Click"/>
+        <AppBarButton x:Name="NextSon" HorizontalAlignment="Center" Icon="Next" Label="" Margin="250,231,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.128,0.121" Click="NextSon_Click"/>
+        <ProgressBar x:Name="SonProgressbar" Margin="30,334,30,0" VerticalAlignment="Top" Height="14">
+            <ProgressBar.Foreground>
+                <SolidColorBrush Color="#FFBBC6D6" Opacity="0.8"/>
+            </ProgressBar.Foreground>
+            <ProgressBar.Background>
+                <SolidColorBrush Color="#FF252525" Opacity="0.8"/>
+            </ProgressBar.Background>
+        </ProgressBar>
+        <Button x:Uid="exportButton" HorizontalAlignment="Center" Margin="130,389,131,0" VerticalAlignment="Top" Click="exportButton_Click" Width="139"/>
+    </Grid>
+</Page>
